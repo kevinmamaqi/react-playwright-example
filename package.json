@@ -1,0 +1,21 @@
+{
+  "name": "test-90poe",
+  "version": "1.0.0",
+  "description": "## Structure",
+  "main": "index.js",
+  "scripts": {
+    "app": "cp .env ./app/.env && cd app && npm run dev",
+    "test": "cp .env ./e2e/.env && cd e2e && npx playwright test"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "playwright",
+    "docker"
+  ],
+  "author": "Kevin Mamaqi Kapllani",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "1.21.1"
+  }
+}
