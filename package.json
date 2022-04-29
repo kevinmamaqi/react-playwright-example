@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "app": "cp .env ./app/.env && cd app && npm run dev",
-    "test": "cp .env ./e2e/.env && cd e2e && npx playwright test"
+    "local-test": "cp .env ./e2e/.env && cd e2e && npx playwright test",
+    "e2e-test": "cd ./scripts && source ./docker.sh; launchTest",
+    "e2e-stop": "cd ./scripts && source ./docker.sh; stopDocker"
   },
   "keywords": [
     "react",

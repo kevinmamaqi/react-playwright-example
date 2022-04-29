@@ -14,13 +14,15 @@ interface BodyI {
 function Body({ children, className = '' }: BodyI) {
   return (
     <BodyStyled className={className}>
-      <Header pb="2rem">
+      <Header id="header" pb="2rem" as="header">
         <Title h={1}>Query React Repos</Title>
       </Header>
       <main id="main">
         <Container>{children}</Container>
       </main>
-      <Footer py="3rem">© Kevin Mamaqi Kapllani</Footer>
+      <Footer id="footer" py="3rem" as="footer">
+        © Kevin Mamaqi Kapllani
+      </Footer>
     </BodyStyled>
   )
 }

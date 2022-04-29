@@ -23,6 +23,7 @@ interface ButtonI {
   text: string
   loadingText?: string
   onClick?: () => void
+  id?: string
 }
 
 function Button({
@@ -31,12 +32,13 @@ function Button({
   loadingText,
   isFetching,
   onClick,
+  id,
 }: ButtonI) {
   const handleClick = () => {
     if (onClick && !isFetching) onClick()
   }
   return (
-    <ButtonStyled type={type} onClick={handleClick}>
+    <ButtonStyled id={id} type={type} onClick={handleClick}>
       {isFetching ? loadingText : text}
     </ButtonStyled>
   )

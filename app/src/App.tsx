@@ -53,7 +53,7 @@ function App() {
       },
     }
   )
-
+  console.log(isFetching)
   return (
     <Body className="App">
       <Input
@@ -66,6 +66,7 @@ function App() {
         mb="0.5rem"
       />
       <Button
+        id="search-button"
         type="submit"
         loadingText="Loading..."
         text="Search"
@@ -89,7 +90,7 @@ function App() {
                 <Th>Forks</Th>
               </Tr>
             </Thead>
-            <Tbody>
+            <Tbody id="tbody">
               {repos.map((repo) => (
                 <Tr key={repo.cursor}>
                   <Td>{repo.node.name}</Td>
@@ -100,6 +101,7 @@ function App() {
             </Tbody>
           </Table>
           <Button
+            id="load-more"
             type="button"
             loadingText="Loading..."
             text="Load more"
@@ -108,7 +110,7 @@ function App() {
           />
         </>
       ) : (
-        <Text>Nothing to show for this query.</Text>
+        <Text id="empty-query">Nothing to show for this query.</Text>
       )}
     </Body>
   )
