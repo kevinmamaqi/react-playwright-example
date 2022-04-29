@@ -10,6 +10,7 @@
 
 ## How to use it
 
+- Create github api token to acccess the graphql request and use it in the .env.
 - _`npm run app`_: starts the frontend app
 - _`npm run local-test`_: launches playwright in localhost.
 - _`e2e-test`_: builds the app in a docker and playwright in a docker and runs the tests.
